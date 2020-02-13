@@ -11,4 +11,4 @@ export const headers = {
   "Accept-Language": "en,ko-KR;q=0.9,ko;q=0.8,da;q=0.7"
 }
 
-export const STATIC_DIR = '/public/dragontail-10.3.1/10.3.1/data/en_US';
+export const STATIC_DIR = './public/dragontail-10.3.1/10.3.1/data/en_US';

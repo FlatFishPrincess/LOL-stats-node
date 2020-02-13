@@ -9,12 +9,12 @@ router.get('/:name', async (req, res, next) => {
     const name = [req.params.name];
     // summoner name, get accountID
     const SUMMONER_BY_NAME = `${BASE_URL}/summoner/v4/summoners/by-name/${name}`;
-    const summonerResult = callAsynchronousOperation(SUMMONER_BY_NAME);
+    const summonerResult = await callAsynchronousOperation(SUMMONER_BY_NAME);
     const { accountId } = summonerResult;
 
     // get match list maximum 5
     const MATCH_LIST_BY_ACCOUNT_ID = `https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/${accountId}?endIndex=${MAX_MATCHLIST_COUNT}`;
-    const matchListResult = callAsynchronousOperation(MATCH_LIST_BY_ACCOUNT_ID);
+    const matchListResult = await callAsynchronousOperation(MATCH_LIST_BY_ACCOUNT_ID);
     const { matches } = matchListResult;
     const matchResultList = await Promise.all(matches.map(async (matchItem)=> {
       const { gameId } = matchItem;

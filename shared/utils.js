@@ -18,7 +18,7 @@ export const readChampionNameById = (championId) => {
 }
 
 export const readSpellNameById = (spellId) => {
-  const summoner = readJsonFile(`${STATIC_DIR}/summoner.json`)
+  const summoners = readJsonFile(`${STATIC_DIR}/summoner.json`)
   const summonerList = summoners.data;
   for (let i in summonerList) {
     if (summonerList[i].key == spellId) {
