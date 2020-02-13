@@ -6,7 +6,7 @@ import fs from 'fs';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const DEVELOP_API = process.env.DEVELOP_API || 'RGAPI-fd268602-8863-4d75-b724-72d798e81b98';
+const DEVELOP_API = process.env.DEVELOP_API || 'RGAPI-6cc9826f-b5fc-4ea5-9898-4bb6189fe362';
 const BASE_URL = `https://na1.api.riotgames.com/lol`
 const MATCH_BY_GAME_ID = `https://na1.api.riotgames.com/lol/match/v4/matches`;
 
