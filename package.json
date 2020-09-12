@@ -17,7 +17,7 @@
     "express-async-handler": "^1.1.4",
     "file-system": "^2.2.2",
     "kayn": "^0.10.2",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.2"
   },
   "devDependencies": {
